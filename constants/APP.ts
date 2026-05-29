@@ -1,0 +1,25 @@
+export const APP = {
+  name: "Udu LabsI",
+  nameShort: "UduLabs",
+  slug: "udu-labs",
+  //
+  title: "We Cook Different",
+  titleVerbose: "We Cook Different | Udu Labs",
+  keywords: [],
+  description: "We develop bold ideas and turn them into work that lands.",
+  category: "Consulting",
+  classification: "Media",
+  owner: "Udu Labs",
+  creator: "Emmanuel Tugbeh",
+  creatorTwitterUsername: "@2gbeh",
+  startData: "2026-05-29T18:00:00.000",
+  launchData: "2026-05-29T21:00:00.000",
+  //
+  domain: "udulabs.ng",
+  website: "https://udulabs.ng",
+  socialPreview: "https://udulabs.ng/social-preview.png",
+  email: "info@udulabs.ng",
+  tel: "+2347030322682",
+  whatsappUrl: "https://wa.me/2347030322682",
+  repositoryUrl: "https://github.com/2gbeh/udu-labs",
+};

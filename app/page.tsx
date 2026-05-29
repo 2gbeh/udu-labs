@@ -1,65 +1,62 @@
+import { APP } from "@/constants/APP";
 import Image from "next/image";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <>
+      <section className="text-center py-4 bg-brand-red/5 border-b border-gray-200 text-black text-sm font-medium  px-4 ">
+        Currently Synthesizing... <strong>Website Under Maintenance</strong>.
+        Find Out What's New Soon
+      </section>
+      <header className="flex items-center justify-between border_ mx-auto sm:w-7xl h-[100px]  px-4 ">
         <Image
-          className="dark:invert"
+          className=""
           src="/logo.png"
-          alt="Next.js logo"
+          alt=""
           width={100}
           height={20}
           priority
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+        <nav className="flex items-center justify-between gap-6">
+          {["The Lab", "Our Experiments", "Solutions", "Contact"].map(
+            (item, i) => (
+              <a
+                key={i}
+                href="#"
+                className="font-semibold text-sm text-black hover:text-brand-blue pressable"
+              >
+                {item}
+              </a>
+            )
+          )}
+        </nav>
+      </header>
+      <main className="flex items-center border_ mx-auto sm:w-7xl flex-1  px-4 ">
+        <div className="flex-1 flex flex-col _border justify-center z-1 pl-10">
+          <h1 className="text-[140px] font-extrabold leading-[120px] tracking-wider font-nunito text-black max-w-[600px]">
+            We <span className="text-brand-blue">Cook</span> Different!
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-2xl mt-4 text-muted-text">
+            We develop <b>bold</b> ideas and turn them into work that lands.
           </p>
+          <div className="flex mt-6">
+            <a
+              className="pressable flex h-12  items-center justify-center gap-2 rounded-full bg-brand-blue px-8 text-background transition-colors hover:bg-brand-blue/90 font-medium"
+              href={APP.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Schedule a Meeting
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <Image
+          src="/flask.png"
+          alt=""
+          fill
+          className="object-contain object-right"
+        />
       </main>
-    </div>
+    </>
   );
 }
