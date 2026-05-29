@@ -3,7 +3,7 @@ import { Nav } from "./nav";
 
 export const Header = () => {
   return (
-    <header className="flex-cb container  h-[100px]  px-4 border_">
+    <header className="flex-cb border_ container h-[100px] px-4">
       <Image
         className=""
         src="/logo.png"
